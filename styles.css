@@ -1,9 +1,27 @@
 body,html {
     height: 100%;
     margin: 0;
+    font-family: 'Roboto', sans-serif;
 }
 
 #container {
     height: 100%;
     box-sizing: border-box;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+}
+
+.header {
+    grid-area: 1 / 2 / 2 / 6;
+}
+
+.sidebar {
+    grid-area: 1 / 1 / 7 / 1;
+    background: #1992d4;
+}
+
+.content {
+    grid-area: 2 / 2 / 7 / 6;
+    background: #e2e8f0;
 }
