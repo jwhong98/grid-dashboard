@@ -1,3 +1,7 @@
+:root {
+    --filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(288deg) brightness(102%) contrast(102%);
+}
+
 body,html {
     height: 100%;
     margin: 0;
@@ -14,6 +18,73 @@ body,html {
 
 .header {
     grid-area: 1 / 2 / 2 / 6;
+}
+
+.header-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 40px;
+}
+
+form {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    width: 60%;
+}
+
+form > input {
+    width: 100%;
+    background: #e2e8f0;
+    border-radius: 20px;
+    border: none;
+    outline: none;
+    font-size: 20px;
+    padding: 5px;
+}
+
+form > button {
+    border: none;
+    outline: none;
+    background: none;
+}
+
+.actions {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.header-icon {
+    width: 25px;
+}
+
+.account-info {
+    display: flex;
+    align-items: center;
+    font-weight: 700;
+    line-height: 1.25;
+}
+
+.display-name {
+    font-size: 24px;
+}
+
+.button-container {
+    display: flex;
+    gap: 20px;
+}
+
+.options {
+    padding: 10px 30px;
+    border-radius: 20px;
+    border: none;
+    outline: none;
+    font-size: 14px;
+    color: #fff;
+    background: #1992d4;
+    font-weight: 700;
 }
 
 .sidebar {
@@ -33,12 +104,12 @@ body,html {
 
 #logo > img {
     width: 50px;
-    filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(288deg) brightness(102%) contrast(102%);
+    filter: var(--filter)
 }
 
 .icon {
     width: 25px;
-    filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(288deg) brightness(102%) contrast(102%);
+    filter: var(--filter);
 }
 
 .tabs > ul {
